@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/updatetask" method="post">
+        Task Id : <input type="text" name="tid" id="tid" value="<%=task.tid%>" readonly><br>
+
+        Assigned TO: <input type="text" name="AssignedTo" id="AssignedTo" value="<%=task.AssignedTo%>"><br>
+        Status : <input type="tezxt" name="Status" id="Status" value="<%=task.Status%>"><br>
+        Due Date : <input type="text" name="DueDate" id="DueDate" value="<%=task.DueDate%>"><br>
+        Priority : <input type="text" name="Priority" id="Priority" value="<%=task.Priority%>"><br>
+        Comments : <input type="text" name="Comments" id="Comments" value="<%=task.Comments%>"><br>
+
+
+        <button type="submit" name="update" id="update" value="update">Update task</button>
+    </form>
+</body>
+
+</html>

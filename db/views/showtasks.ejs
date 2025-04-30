@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        Tasks
+    </header>
+    <div>
+        <form action="/inserttasks">
+            <button type="submit" name="btn" id="add" value="add">Add new Task</button>
+        </form>
+    </div>
+    <div>
+        <table border="'2">
+            <thead>
+                <tr>
+                    <th>tid</th>
+                    <th>Assigned TO</th>
+                    <th>Status </th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Comments</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <%for(var i=0;i<taskdata.length;i++){%>
+                    <tr>
+                        <td>
+                            <%=taskdata[i].tid%>
+                        </td>
+                        <td>
+                            <%=taskdata[i].AssignedTo%>
+                        </td>
+                        <td>
+                            <%=taskdata[i].Status%>
+                        </td>
+                        <td>
+                            <%=taskdata[i].DueDate%>
+                        </td>
+                        <td>
+                            <%=taskdata[i].Priority%>
+                        </td>
+                        <td>
+                            <%=taskdata[i].Comments%>
+                        </td>
+                        <td>
+                            <a href="edittask/<%=taskdata[i].tid%>">edit</a>
+                            /
+                            <a href="delete/<%=taskdata[i].tid%>">delete</a>
+                        </td>
+                    </tr>
+
+                    <%}%>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>
